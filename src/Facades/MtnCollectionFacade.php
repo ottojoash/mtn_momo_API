@@ -1,6 +1,6 @@
 <?php
 
-namespace PatricPoba\MtnMomo\Facades;
+namespace Ottojoash\MtnMomo\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
