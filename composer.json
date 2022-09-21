@@ -1,0 +1,57 @@
+{
+    "name": "ottojoash/mtn-momo-api-php",
+    "description": "Php wrapper for MTN Momo API - https://momodeveloper.mtn.com",
+    "keywords": [
+        "ottojoash",
+        "mtn-momo-api-php"
+    ],
+    "homepage": "https://github.com/ottojoash/mtn-momo-api-php",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Otto Joash",
+            "email": "ottojoash48@outlook.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0",
+        "orchestra/testbench": "^3.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ottojoash\\MtnMomo\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ottojoash\\MtnMomo\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ottojoash\\MtnMomo\\MtnMomoServiceProvider"
+            ],
+            "aliases": {
+                "MtnMomoCollection": "ottojoash\\MtnMomo\\Facades\\MtnCollectionFacade",
+                "MtnMomoRemittance": "ottojoash\\MtnMomo\\Facades\\MtnRemittanceFacade",
+                "MtnMomoDisbursement": "ottojoash\\MtnMomo\\Facades\\MtnDisbursementFacade"
+            }
+        }
+    }
+}
